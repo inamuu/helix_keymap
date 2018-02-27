@@ -124,7 +124,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       ADJUST,  KC_ESC,  KC_LALT, KC_LGUI, EISU,    LOWER,   KC_SPC,  KC_SPC,  RAISE,   KANA,    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
       ),
 
-  /* Lower
+  /* Left
    * ,-----------------------------------------.             ,-----------------------------------------.
    * |   ~  |   !  |   @  |   #  |   $  |   %  |             |   ^  |   &  |   *  |   (  |   )  |      |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
@@ -145,7 +145,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY \
       ),
 
-  /* Raise
+  /* Right
    * ,-----------------------------------------.             ,-----------------------------------------.
    * |   `  |   1  |   2  |   3  |   4  |   5  |             |   6  |   7  |   8  |   9  |   0  | Bksp |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
@@ -310,7 +310,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 float tone_qwerty[][2]     = SONG(QWERTY_SOUND);
 float tone_dvorak[][2]     = SONG(DVORAK_SOUND);
-float tone_colemak[][2]    = SONG(COLEMAK_SOUND);
+float ight_colemak[][2]    = SONG(COLEMAK_SOUND);
 float tone_plover[][2]     = SONG(PLOVER_SOUND);
 float tone_plover_gb[][2]  = SONG(PLOVER_GOODBYE_SOUND);
 float music_scale[][2]     = SONG(MUSIC_SCALE_SOUND);
@@ -572,10 +572,10 @@ void render_status(struct CharacterMatrix *matrix) {
            matrix_write_P(matrix, PSTR("Default"));
            break;
         case L_RAISE:
-           matrix_write_P(matrix, PSTR("Raise"));
+           matrix_write_P(matrix, PSTR("Right"));
            break;
         case L_LOWER:
-           matrix_write_P(matrix, PSTR("Lower"));
+           matrix_write_P(matrix, PSTR("Left"));
            break;
         case L_ADJUST:
         case L_ADJUST_TRI:
